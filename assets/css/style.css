@@ -1,0 +1,63 @@
+body {
+    /*ViewPort é a tela visivel dependendo do aparelho, se colocasse só o pixel, não levaria em conta o aparelho da pessoa, por isso 100vw(viewidth) e 100vh(viewheight)*/
+    width: 100vw; /*Largura de 100 viewPortWidth (Tela Visivel Largura)*/
+    height: 100vh; /*altura 100 ViewPortHeight*/
+    font-family: 'Roboto', 'sans-serif'; /*Familia da fonte (letras)*/
+    background-color: rgb(205, 154, 194); /*Fundo rosa*/
+    color: white; /*Cor da fonte branca*/
+}
+
+
+/*CABEÇALHO*/
+.header {
+    background-color: #141414; /*fundo um pouco mais claro*/
+    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
+
+/*é um módulo de layout poderoso que facilita a organização, alinhamento e distribuição de itens dentro de um contêiner, seja em uma dimensão (linha ou coluna), tornando os layouts mais responsivos e flexíveis, ideal para menus.
+Quando você aplica display: flex; a um elemento, ele se torna um "contêiner flexível", e seus filhos se transformam em "itens flexíveis" que podem ser controlados com propriedades como flex-direction, justify-content, align-items*/
+
+    align-items: center;  /*Alinhando horizontalmente no centro*/
+    flex-direction: row; /*Faz os itens do cabeçalho ficarem em linha*/
+    padding: 0 20px;  /* deixa espaçamento interno nas laterais, 0 em cima e baixo, 20px direita e esquerda*/
+   
+}
+
+/*LOGO*/
+.header .logo img {
+    margin-right: 20px;  /*Espaçamento a direita de 20px*/
+    height: 70px; /*Aqui definimos a altura em 70px*/  
+    
+}
+
+/*MENU NAV*/
+.header .menu {
+    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
+    gap: 15px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */   
+         
+}
+
+  /*ESTILIZAÇÂO MENU*/
+.header .menu a {
+    color: white; /*Letra Branca */
+    text-decoration: none;  /* Tira qualquer decoraçao do texto, no caso o link */
+    font-size: 14px; /*Tamanho da fonte */
+}
+
+  /*Estilizando passar o mouse no menu vermelhinho*/
+.menu a:hover {
+    color: red;
+}
+
+  /*ICONES*/
+.header .icons {
+    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
+    margin-left: auto;  /*espaçamento a esquerda para a  extrema direita da pag. */
+        
+}
+
+/*IMAGENS DOS ICONES*/
+.header .icons img {
+   width: 30px; /*Aqui definimos a largura em 450px*/
+    height: auto; /*Aqui definimos a altura em automatica*/
+    padding: 5px; /* deixa espaçamento interno  em todos os lados de 5 px*/
+}
