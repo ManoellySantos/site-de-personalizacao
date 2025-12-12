@@ -1,63 +1,84 @@
 body {
+    margin: 0;
+    padding: 0;
+
     /*ViewPort é a tela visivel dependendo do aparelho, se colocasse só o pixel, não levaria em conta o aparelho da pessoa, por isso 100vw(viewidth) e 100vh(viewheight)*/
     width: 100vw; /*Largura de 100 viewPortWidth (Tela Visivel Largura)*/
     height: 100vh; /*altura 100 ViewPortHeight*/
     font-family: 'Roboto', 'sans-serif'; /*Familia da fonte (letras)*/
-    background-color: rgb(205, 154, 194); /*Fundo rosa*/
-    color: white; /*Cor da fonte branca*/
+    background-color: #bdb3b9; /*Fundo rosa*/
+    color: #333; /*Cor da fonte*/
 }
+
+.container {
+    width: 1200px; /*Largura máxima do container*/
+    height: 1200px; /*Altura automática do container*/
+    margin: 0 auto; /*Centraliza o container na tela*/
+    padding: 20px; /*Espaçamento interno do container*/
+    border-radius: 10px; /*Bordas arredondadas do container*/
+    background-color: #ffffffee; /*Fundo branco com transparência*/
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.1); /*Sombra ao redor do container*/
+    }
 
 
 /*CABEÇALHO*/
 .header {
-    background-color: #141414; /*fundo um pouco mais claro*/
+    background-color: #ffffffef; /*fundo um pouco mais claro*/
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
 
 /*é um módulo de layout poderoso que facilita a organização, alinhamento e distribuição de itens dentro de um contêiner, seja em uma dimensão (linha ou coluna), tornando os layouts mais responsivos e flexíveis, ideal para menus.
 Quando você aplica display: flex; a um elemento, ele se torna um "contêiner flexível", e seus filhos se transformam em "itens flexíveis" que podem ser controlados com propriedades como flex-direction, justify-content, align-items*/
 
     align-items: center;  /*Alinhando horizontalmente no centro*/
-    flex-direction: row; /*Faz os itens do cabeçalho ficarem em linha*/
-    padding: 0 20px;  /* deixa espaçamento interno nas laterais, 0 em cima e baixo, 20px direita e esquerda*/
-   
+    justify-content: space-between; /*Espaço entre os elementos do cabeçalho*/
+    padding: 15px 40px; /* deixa espaçamento interno nas laterais, 15px em cima e baixo, 40px direita e esquerda*/
+    box-shadow: 0 2 8px rgb(0, 0, 0.1); /*Sombra abaixo do cabeçalho*/
+    backdrop-filter:blur(10px); /*Deixa o fundo do cabeçalho com um efeito de desfoque*/
+          
 }
 
 /*LOGO*/
 .header .logo img {
-    margin-right: 20px;  /*Espaçamento a direita de 20px*/
-    height: 70px; /*Aqui definimos a altura em 70px*/  
+    height: 80px; /*Aqui definimos a altura em 80px*/  
     
 }
 
 /*MENU NAV*/
 .header .menu {
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
-    gap: 15px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */   
-         
+    gap: 25px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */ 
+               
 }
 
   /*ESTILIZAÇÂO MENU*/
 .header .menu a {
-    color: white; /*Letra Branca */
+    color: #4a3f46; /*Letra cinza */
     text-decoration: none;  /* Tira qualquer decoraçao do texto, no caso o link */
-    font-size: 14px; /*Tamanho da fonte */
+    font-size: 16px; /*Tamanho da fonte */
+    font-weight: 500; /*Espessura/Peso da fonte*/ 
+    transition: 0.3s; /*Transição suave de 0.3 segundos - efeito visual*/      
 }
 
-  /*Estilizando passar o mouse no menu vermelhinho*/
-.menu a:hover {
-    color: red;
+ /* hover*/
+ .header .menu a:hover {
+    color: #7a3c51; /* bordô suave */
 }
 
-  /*ICONES*/
-.header .icons {
-    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
-    margin-left: auto;  /*espaçamento a esquerda para a  extrema direita da pag. */
-        
+ /*Estilizando o botao login*/
+
+ .botao .login{
+    background-color: #ffffff; /*cor de fundo*/
+    color:#7a3c51; /*cor do texto*/
+    border-radius: 25px; /*circuferência da borda*/
+    border: 2px solid #7a3c51; /*borda*/
+    font-weight: bold; /*fonte em negrito*/
+    font-size: 16px; /*tamanho da fonte*/
+    cursor: pointer; /*ponteiro*/
+    transition: 0.3s; /*transição suave de 0.3 segundos - efeito visual*/
 }
 
-/*IMAGENS DOS ICONES*/
-.header .icons img {
-   width: 30px; /*Aqui definimos a largura em 450px*/
-    height: auto; /*Aqui definimos a altura em automatica*/
-    padding: 5px; /* deixa espaçamento interno  em todos os lados de 5 px*/
-}
+    /*hover botao login*/
+    .botao .login:hover {
+        background-color: #7a3c51; /*cor de fundo bordô*/
+        color: #ffffff; /*cor do texto branco*/
+    }
