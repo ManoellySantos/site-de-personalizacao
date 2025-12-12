@@ -11,9 +11,10 @@ body {
 }
 
 .container {
-    width: 1200px; /*Largura máxima do container*/
-    height: 1200px; /*Altura automática do container*/
-    margin: 0 auto; /*Centraliza o container na tela*/
+    
+    width: 80vw; /*Largura máxima do container*/
+    height: 50vw; /*Altura automática do container*/
+    margin: 50px auto; /*Centraliza o container na tela*/
     padding: 20px; /*Espaçamento interno do container*/
     border-radius: 10px; /*Bordas arredondadas do container*/
     background-color: #ffffffee; /*Fundo branco com transparência*/
@@ -23,6 +24,7 @@ body {
 
 /*CABEÇALHO*/
 .header {
+    
     background-color: #ffffffef; /*fundo um pouco mais claro*/
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
 
@@ -32,21 +34,23 @@ Quando você aplica display: flex; a um elemento, ele se torna um "contêiner fl
     align-items: center;  /*Alinhando horizontalmente no centro*/
     justify-content: space-between; /*Espaço entre os elementos do cabeçalho*/
     padding: 15px 40px; /* deixa espaçamento interno nas laterais, 15px em cima e baixo, 40px direita e esquerda*/
-    box-shadow: 0 2 8px rgb(0, 0, 0.1); /*Sombra abaixo do cabeçalho*/
+    box-shadow: 0 0.3px rgb(0, 0, 0, 0.3); /*Sombra abaixo do cabeçalho*/
     backdrop-filter:blur(10px); /*Deixa o fundo do cabeçalho com um efeito de desfoque*/
           
 }
 
 /*LOGO*/
 .header .logo img {
-    height: 80px; /*Aqui definimos a altura em 80px*/  
+    height: 80px; /*Aqui definimos a altura em 80px*/
+    width: 105px; /*Aqui definimos a largura em 100px*/
+    border-radius: 100%; /*Bordas arredondadas na logo*/
     
 }
 
 /*MENU NAV*/
 .header .menu {
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
-    gap: 25px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */ 
+    gap: 40px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */ 
                
 }
 
@@ -54,9 +58,11 @@ Quando você aplica display: flex; a um elemento, ele se torna um "contêiner fl
 .header .menu a {
     color: #4a3f46; /*Letra cinza */
     text-decoration: none;  /* Tira qualquer decoraçao do texto, no caso o link */
-    font-size: 16px; /*Tamanho da fonte */
+    font-size: 20px; /*Tamanho da fonte */
     font-weight: 500; /*Espessura/Peso da fonte*/ 
-    transition: 0.3s; /*Transição suave de 0.3 segundos - efeito visual*/      
+    font-weight: bold; /*Espessura/Peso da fonte*/ 
+    transition: 0.3s; /*Transição suave de 0.3 segundos - efeito visual*/ 
+       
 }
 
  /* hover*/
@@ -67,12 +73,14 @@ Quando você aplica display: flex; a um elemento, ele se torna um "contêiner fl
  /*Estilizando o botao login*/
 
  .botao .login{
-    background-color: #ffffff; /*cor de fundo*/
-    color:#7a3c51; /*cor do texto*/
-    border-radius: 25px; /*circuferência da borda*/
+    width: 120px; /*largura do botao*/
+    height: 50px;
+    background-color: #7a3c51; /*Fundo rosa*/
+    color:#fff; /*cor do texto*/
+    border-radius: 10px; /*circuferência da borda*/
     border: 2px solid #7a3c51; /*borda*/
     font-weight: bold; /*fonte em negrito*/
-    font-size: 16px; /*tamanho da fonte*/
+    font-size: 20px; /*tamanho da fonte*/
     cursor: pointer; /*ponteiro*/
     transition: 0.3s; /*transição suave de 0.3 segundos - efeito visual*/
 }
