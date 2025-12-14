@@ -7,36 +7,41 @@ body {
     height: 100vh; /*altura 100 ViewPortHeight*/
     font-family: 'Roboto', 'sans-serif'; /*Familia da fonte (letras)*/
     background-color: #bdb3b9; /*Fundo rosa*/
-    color: #333; /*Cor da fonte*/
+    color: #333; /*Cor da fonte*/ 
+    margin-bottom: 50%; /*Espaçamento embaixo do container*/  
+      
+    
 }
 
 .container {
+
+    /**Definindo o container principal da página**/
     
-    width: 80vw; /*Largura máxima do container*/
-    height: 50vw; /*Altura automática do container*/
+    width: 80%; /*Largura container*/
+    height: 1200px; /*Altura container*/  
+    
     margin: 50px auto; /*Centraliza o container na tela*/
     padding: 20px; /*Espaçamento interno do container*/
     border-radius: 10px; /*Bordas arredondadas do container*/
     background-color: #ffffffee; /*Fundo branco com transparência*/
     box-shadow: 0 2px 8px rgb(0, 0, 0, 0.1); /*Sombra ao redor do container*/
+        
     }
 
 
 /*CABEÇALHO*/
 .header {
-    
     background-color: #ffffffef; /*fundo um pouco mais claro*/
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
+    flex-wrap: wrap;
 
-/*é um módulo de layout poderoso que facilita a organização, alinhamento e distribuição de itens dentro de um contêiner, seja em uma dimensão (linha ou coluna), tornando os layouts mais responsivos e flexíveis, ideal para menus.
-Quando você aplica display: flex; a um elemento, ele se torna um "contêiner flexível", e seus filhos se transformam em "itens flexíveis" que podem ser controlados com propriedades como flex-direction, justify-content, align-items*/
 
     align-items: center;  /*Alinhando horizontalmente no centro*/
     justify-content: space-between; /*Espaço entre os elementos do cabeçalho*/
     padding: 15px 40px; /* deixa espaçamento interno nas laterais, 15px em cima e baixo, 40px direita e esquerda*/
     box-shadow: 0 0.3px rgb(0, 0, 0, 0.3); /*Sombra abaixo do cabeçalho*/
     backdrop-filter:blur(10px); /*Deixa o fundo do cabeçalho com um efeito de desfoque*/
-          
+              
 }
 
 /*LOGO*/
@@ -49,9 +54,11 @@ Quando você aplica display: flex; a um elemento, ele se torna um "contêiner fl
 
 /*MENU NAV*/
 .header .menu {
+    
+    
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
     gap: 40px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */ 
-               
+    flex-wrap: wrap;    
 }
 
   /*ESTILIZAÇÂO MENU*/
@@ -62,6 +69,7 @@ Quando você aplica display: flex; a um elemento, ele se torna um "contêiner fl
     font-weight: 500; /*Espessura/Peso da fonte*/ 
     font-weight: bold; /*Espessura/Peso da fonte*/ 
     transition: 0.3s; /*Transição suave de 0.3 segundos - efeito visual*/ 
+    flex-wrap: wrap;
        
 }
 
@@ -73,6 +81,7 @@ Quando você aplica display: flex; a um elemento, ele se torna um "contêiner fl
  /*Estilizando o botao login*/
 
  .botao .login{
+    
     width: 120px; /*largura do botao*/
     height: 50px;
     background-color: #7a3c51; /*Fundo rosa*/
