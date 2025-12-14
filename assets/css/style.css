@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
 
-    /*ViewPort é a tela visivel dependendo do aparelho, se colocasse só o pixel, não levaria em conta o aparelho da pessoa, por isso 100vw(viewidth) e 100vh(viewheight)*/
+        /*ViewPort é a tela visivel dependendo do aparelho, se colocasse só o pixel, não levaria em conta o aparelho da pessoa, por isso 100vw(viewidth) e 100vh(viewheight)*/
     width: 100vw; /*Largura de 100 viewPortWidth (Tela Visivel Largura)*/
     height: 100vh; /*altura 100 ViewPortHeight*/
     font-family: 'Roboto', 'sans-serif'; /*Familia da fonte (letras)*/
@@ -49,6 +49,9 @@ body {
     height: 80px; /*Aqui definimos a altura em 80px*/
     width: 105px; /*Aqui definimos a largura em 100px*/
     border-radius: 100%; /*Bordas arredondadas na logo*/
+    height: 80px; /*Aqui definimos a altura em 80px*/
+    width: 105px; /*Aqui definimos a largura em 100px*/
+    border-radius: 100%; /*Bordas arredondadas na logo*/
     
 }
 
@@ -63,6 +66,7 @@ body {
 
   /*ESTILIZAÇÂO MENU*/
 .header .menu a {
+    color: #4a3f46; /*Letra cinza */
     color: #4a3f46; /*Letra cinza */
     text-decoration: none;  /* Tira qualquer decoraçao do texto, no caso o link */
     font-size: 20px; /*Tamanho da fonte */
