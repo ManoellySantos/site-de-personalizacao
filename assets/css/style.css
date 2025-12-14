@@ -1,21 +1,17 @@
 body {
-    margin: 0;
-    padding: 0;   
+    margin: 0; /*Margem da página*/
+    padding: 0; /*Espaçamento interno da página*/   
 
     font-family: 'Roboto', 'sans-serif'; /*Familia da fonte (letras)*/
-    background-color: #bdb3b9; /*Fundo rosa*/
     color: #333; /*Cor da fonte*/    
 }
 
-.container {
-
-    /**Definindo o container principal da página**/
-    
+/**Definindo o container principal da página**/
+.container {  
     width: 100%; /*Largura container*/
     height: 1200px; /*Altura container*/  
     background-color: #ffffffee; /*Fundo branco com transparência*/     
     }
-
 
 /*CABEÇALHO*/
 .header {
@@ -32,18 +28,19 @@ body {
 }
 
 /*LOGO*/
-
 .logo {
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
     align-items: center; /*Alinhando horizontalmente no centro*/
     padding-left: 20px; /*Espaçamento interno da logo*/
 }
+
+/*ESTILIZAÇÃO DA LOGO*/   
 .header .logo img {
     
     height: 60px; /*Aqui definimos a altura em 80px*/
     width: 100px; /*Aqui definimos a largura em 100px*/
     border-radius: 50%; /*Bordas arredondadas na logo*/
-    object-fit: contain;
+    object-fit: contain; /*Mantém a proporção da imagem*/
     
 }
 
@@ -69,11 +66,12 @@ body {
        
 }
 
- /* hover*/
+ /* hover menu*/
  .header .menu a:hover {
     color: #7a3c51; /* bordô suave */
 }
 
+/*AÇÕES DO CABEÇALHO (CARRINHO E BOTOES)*/
 .acoes {
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
     align-items: center; /*Alinhando horizontalmente no centro*/
@@ -84,7 +82,7 @@ body {
 .carrinho {
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
     align-items: center; /*Alinhando horizontalmente no centro*/
-     margin-left: auto;
+    margin-left: auto;
     
     }
 
@@ -96,28 +94,45 @@ body {
 
  /*Estilizando o botao login*/
  .botao .login{
-    
     width: 100px; /*largura do botao*/
-    height: 35px;
-    background-color: #7a3c51; /*Fundo rosa*/
-    color:#fff; /*cor do texto*/
-    border-radius: 10px; /*circuferência da borda*/
-    border: 2px solid #7a3c51; /*borda*/
-    font-weight: bold; /*fonte em negrito*/
-    font-size: 18px; /*tamanho da fonte*/
-    cursor: pointer; /*ponteiro*/
-
-    margin-right: 20px; /*margem direita*/
+    height: 35px; /*altura do botao*/
+    background-color: #7a3c51; /*cor de fundo bordô*/
+    color: #fff; /*cor do texto branco*/    
+    border-radius: 10px; /*bordas arredondadas*/
+    border: none; /*sem borda*/
+    font-weight: bold; /*negrito*/
+    font-size: 16px; /*tamanho da fonte*/
+    cursor: pointer; /*ponteiro ao passar o mouse*/
     
 }
+
+    /*Estilizando o botao cadastro*/
+.botao .cadastro{
+    
+    background: none; /*Fundo transparente*/
+    border: none; /*Sem borda*/
+    color: #7a3c51; /*cor bordô*/
+    font-weight: bold; /*negrito*/
+    font-size: 16px; /*tamanho da fonte*/
+    cursor: pointer; /*ponteiro ao passar o mouse*/
+}
+
+    /*hover botao cadastro*/
+.botao .cadastro:hover {
+    transform: scale(1.2); /*aumenta o tamanho do botao ao passar o mouse*/
+     
+    }
+
+    /*hover carrinho*/
+
  .carrinho:hover {
         transform: scale(1.1); /*aumenta o tamanho do botao ao passar o mouse*/
         }
 
     /*hover botao login*/
     .botao .login:hover {
-        background-color: #7a3c51; /*cor de fundo bordô*/
-        color: #ffffff; /*cor do texto branco*/
+        background-color: #ffffff; /*cor de fundo bordô*/
+        color: #7a3c51; /*cor do texto branco*/
         transform: scale(1.1); /*aumenta o tamanho do botao ao passar o mouse*/
         box-shadow: 0 6px 15px rgba(122, 60, 81, 0.4); /*sombra*/
         }
