@@ -1,36 +1,50 @@
+/* Estilo body  */
 body {
-    
-    margin: 0; /*Margem da página*/
-    padding: 0; /*Espaçamento interno da página*/   
-
-    font-family: 'Roboto', 'sans-serif'; /*Familia da fonte (letras)*/
-    background-color: #bdb3b9; /*Fundo rosa*/
-    color: #333; /*Cor da fonte*/
-    
-     
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Fundo suave */
+    color: #1c1e21;
 }
 
-.container{
-    /**Definindo o container principal da página**/
-    width: 100%; /*Largura container*/
-    height: 1200px; /*Altura container*/  
-    background-color: #ffffffee; /*Fundo branco com transparência*/
-    
-}
 
-/*CABEÇALHO*/
+
+/* --- cabecalho --- */
+
+
 .header {
-     background-color: #ffffffef; /*fundo um pouco mais claro*/
-    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
-    flex-wrap: wrap; /*Permite que os elementos do cabeçalho quebrem linha se necessário*/
-    position: sticky; /*Fixa o cabeçalho no topo da página ao rolar*/
-    align-items: center;  /*Alinhando horizontalmente no centro*/
-    justify-content: space-between; /*Espaço entre os elementos do cabeçalho*/    
-    box-shadow: 0 1px rgb(0, 0, 0, 0.3); /*Sombra abaixo do cabeçalho*/
-    backdrop-filter:blur(10px); /*Deixa o fundo do cabeçalho com um efeito de desfoque*/
-    padding: 0 30px; /*Espaçamento interno do cabeçalho*/
-              
+   background-color: #7a3c51; /* fundo azul  */
+    color: white;
+    padding: 2px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    
+    /* PROPRIEDADES FIXAS */
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 100;    
 }
+
+/* Novo: Contêiner para alinhar elementos (Logo, Menu, Botões) */
+.cabeçalho {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px; /* Reduzi o padding para caber tudo */
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Estilo do Logo/Título */
+.header h1 {
+    margin: 0;
+    font-size: 1.8em; /* Reduzi para caber melhor */
+}
+
+
 
 /*LOGO*/
 .logo {
@@ -47,35 +61,25 @@ body {
     object-fit: contain; /*Mantém a proporção da imagem*/
 }
 
-/*MENU NAV*/
-.header .menu {        
-    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
-    gap: 40px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */ 
-    flex-wrap: wrap; /*Permite que os elementos do menu quebrem linha se necessário*/      
+/* Novo: Estilo do Menu de Navegação */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 15px;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
-/*ESTILIZAÇÂO MENU*/
-.header .menu a {
-    color: #4a3f46; /*Letra cinza */
-    color: #4a3f46; /*Letra cinza */
-    text-decoration: none;  /* Tira qualquer decoraçao do texto, no caso o link */
-    font-size: 18px; /*Tamanho da fonte */
-    font-weight: 500; /*Espessura/Peso da fonte*/ 
-    font-weight: bold; /*Espessura/Peso da fonte*/ 
-    transition: 0.3s; /*Transição suave de 0.3 segundos - efeito visual*/ 
-    flex-wrap: wrap; /*Permite que os elementos do menu quebrem linha se necessário*/  
+.nav-menu a:hover {
+    color: #ffc107; /* Amarelo de destaque */
+    border-bottom: 2px solid #ffc107;
 }
 
-/* hover*/
- .header .menu a:hover {
-    color: #7a3c51; /* bordô suave */
-}
-
-/*AÇÕES DO CABEÇALHO (CARRINHO E BOTOES)*/
+/* Novo: Estilo dos Botões de Ação */
 .acoes {
-     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
-    align-items: center; /*Alinhando horizontalmente no centro*/
-    gap: 30px; /*Espaçamento entre o carrinho e o botao*/
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
 }
 
 /*Estilizando o Carrinho*/
@@ -83,7 +87,7 @@ body {
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
     align-items: center; /*Alinhando horizontalmente no centro*/
     margin-left: auto; /*Empurra o carrinho para a direita*/
-    
+    margin-right: 10px; /*Adiciona um espaço à direita do carrinho*/
 }
 
 /*Estilizando a imagem do carrinho*/
@@ -94,49 +98,35 @@ body {
     cursor: pointer; /*ponteiro ao passar o mouse*/
  }
 
- /*Estilizando o botao login*/
- .botao .login{
-    width: 100px; /*largura do botao*/
-    height: 35px; /*altura do botao*/
-    background-color: #7a3c51; /*cor de fundo bordô*/
-    color: #fff; /*cor do texto branco*/    
-    border-radius: 10px; /*bordas arredondadas*/
-    border: none; /*sem borda*/
-    font-weight: bold; /*negrito*/
-    font-size: 16px; /*tamanho da fonte*/
-    cursor: pointer; /*ponteiro ao passar o mouse*/
-    
+.btn-action {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-    /*Estilizando o botao cadastro*/
-.botao .cadastro{
-    
-    background: none; /*Fundo transparente*/
-    border: none; /*Sem borda*/
-    color: #7a3c51; /*cor bordô*/
-    font-weight: bold; /*negrito*/
-    font-size: 16px; /*tamanho da fonte*/
-    cursor: pointer; /*ponteiro ao passar o mouse*/
+/* Estilo específico para Login */
+.btn-login {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
 }
 
-    /*hover botao cadastro*/
-.botao .cadastro:hover {
-    transform: scale(1.2); /*aumenta o tamanho do botao ao passar o mouse*/
-     
+.btn-login:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-    /*hover carrinho*/
-
- .carrinho:hover {
-        transform: scale(1.1); /*aumenta o tamanho do botao ao passar o mouse*/
+/* Estilo específico para Cadastro (Botão principal de ação) */
+.btn-cadastro {
+    background-color: ffffffef; /* Amarelo de destaque */
+    color: #7a3c51;
+    border: 2px solid #ffc107;
 }
 
-    /*hover botao login*/
-    .botao .login:hover {
-        background-color: #ffffff; /*cor de fundo bordô*/
-        color: #7a3c51; /*cor do texto branco*/
-        transform: scale(1.1); /*aumenta o tamanho do botao ao passar o mouse*/
-        box-shadow: 0 6px 15px rgba(122, 60, 81, 0.4); /*sombra*/
+.btn-cadastro:hover {
+    background-color: #e0a800;
 }
 
 /*Banner*/
@@ -145,8 +135,8 @@ body {
     position: relative; /*relative para melhor responsividade*/
     justify-content: center; /*Centraliza os elementos do banner*/
     width: 100%; /*Largura 100% do container pai*/
-    height: auto; /*Altura automática conforme conteúdo*/
-    padding: 40px 20px; /*Espaçamento interno responsivo*/
+    height: 50px; /*Altura automática conforme conteúdo*/
+    padding: 200px 50px 125px 50px; /*Espaçamento interno responsivo*/
     flex-direction: column; /*Posiciona elementos em coluna*/
     align-items: flex-start; /*Alinha itens à esquerda*/
 }
@@ -207,8 +197,8 @@ body {
     align-items: flex-end; /*Alinha a imagem do banner na parte inferior*/
     max-width: 100%; /*Largura 100% do container pai*/
     max-height: auto; /*Altura automática conforme conteúdo*/
-    right: 10%; /*Posiciona a imagem na direita*/
-    top: 20%; /*Posiciona a imagem verticalmente no centro*/ 
+    right: 15%; /*Posiciona a imagem na direita*/
+    top: 35%; /*Posiciona a imagem verticalmente no centro*/ 
 }
 
 .imagem-banner img{
@@ -219,6 +209,186 @@ body {
     object-fit: contain; /*Mantém proporção da imagem*/
 }
 
+
+main {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+        
+}
+
+
+
+/* Estilando o carrocel ;) */
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden; /* Oculta os itens que estão fora da vista */
+    margin: 40px 0;
+    padding: 0 10px;
+}
+
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Suaviza a transição de movimento */
+}
+
+.item {
+    /* Define o tamanho de cada item. O JS calculará o movimento,
+       mas o CSS define quantos cabem na tela. */
+    min-width: 25%; 
+    box-sizing: border-box;
+    padding: 10px;
+    flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+/* Responsividade: 3 itens no tablet */
+@media (max-width: 992px) {
+    .item {
+        min-width: 33.333%; 
+    }
+}
+
+/* Responsividade: 2 itens no mobile */
+@media (max-width: 768px) {
+    .item {
+        min-width: 50%;
+    }
+}
+
+/* Responsividade: 1 item em telas muito pequenas */
+@media (max-width: 480px) {
+    .item {
+        min-width: 100%;
+    }
+}
+
+
+/* Estilização do Cartão do Produto */
+.item-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+    height: 100%; /* Garante altura uniforme */
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.item-card img {
+    width: 100%;    
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+}
+
+.item-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.item-info h3 {
+    margin: 5px 0;
+    color: #7a3c51;
+    font-size: 1.1em;
+}
+
+.item-info p {
+    margin: 5px 0 0;
+    color: #ff5722; /* Cor de preço em destaque */
+    font-weight: 700;
+}
+
+/* Estilos dos Botões de Navegação */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 15px 18px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 900;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background 0.3s;
+    line-height: 1; /* Alinha o texto/símbolo */
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.btn:disabled {
+    background: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
+.btn-left {
+    left: 20px;
+}
+
+.btn-right {
+    right: 20px;
+}
+
+/*Estilizando o carde dos container*/
+
+.container{  
+    display: flex; /* Usa Flexbox */  
+    flex-wrap: wrap; /* Permite que os cartões quebrem em múltiplas linhas */    
+    justify-content: center; /* Centraliza os cartões na tela */    
+    align-items: flex-start; /* Alinha os itens ao topo do contêiner */    
+    margin-top: 50px; /* Margem acima */
+    padding: 20px 10px; /* Espaçamento interno */
+    gap: 20px; /* ADICIONAL: Espaçamento entre os cartões (linha e coluna) */
+}
+
+.item-card-container{    
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 100%; /* Garante altura uniforme */
+}
+
+.item-card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.item-card-container img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover;
+}
+
+.item-info-container {
+    padding: 15px;
+    text-align: center;
+}
+
+.item-info-container h3 {
+    margin: 5px 0;
+    color: #7a3c51;
+    font-size: 1.1em;
+}
+
+.item-info-container p {
+    margin: 5px 0 0;      
+    color: #ff5722; /* Cor de preço em destaque */
+    font-weight: 700;   
+}
+
 /*Rodapé*/
 footer {
     display: flex; /*Permite posicionar os elementos do rodapé*/
@@ -226,7 +396,8 @@ footer {
     padding: 20px 0; /*Espaçamento interno do rodapé*/
     flex-direction: column; /*Posiciona os elementos em coluna*/
     text-align: center; /*Centraliza os elementos do rodapé*/
-    gap: 10px; /*Espaço entre os elementos do rodapé*/
+    gap: px; /*Espaço entre os elementos do rodapé*/
+    bottom: 0; /*Posiciona o rodapé na parte inferior*/
 }
 
 footer p{
