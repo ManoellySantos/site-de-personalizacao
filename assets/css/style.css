@@ -5,6 +5,9 @@ body {
     o aparelho da pessoa, por isso 100vw(viewidth) e 100vh(viewheight)*/
     width: 100vw; /*Largura de 100 viewPortWidth (Tela Visivel Largura)*/
     height: 100vh; /*altura 100 ViewPortHeight*/
+    margin: 0; /*Margem da página*/
+    padding: 0; /*Espaçamento interno da página*/   
+
     font-family: 'Roboto', 'sans-serif'; /*Familia da fonte (letras)*/
     background-color: #bdb3b9; /*Fundo rosa*/
     color: #333; /*Cor da fonte*/ 
@@ -22,7 +25,6 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*Sombra ao redor do container*/
 }
 
-
 /*CABEÇALHO*/
 .header {
     background-color: #ffffffef; /*fundo um pouco mais claro*/
@@ -33,10 +35,18 @@ body {
     padding: 15px 40px; /* deixa espaçamento interno nas laterais, 15px em cima e baixo, 40px direita e esquerda*/
     box-shadow: 0 0.3px rgba(0, 0, 0, 0.3); /*Sombra abaixo do cabeçalho*/
     backdrop-filter:blur(10px); /*Deixa o fundo do cabeçalho com um efeito de desfoque*/
+    padding: 0 30px; /*Espaçamento interno do cabeçalho*/
               
 }
 
 /*LOGO*/
+.logo {
+    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
+    align-items: center; /*Alinhando horizontalmente no centro*/
+    padding-left: 20px; /*Espaçamento interno da logo*/
+}
+
+/*ESTILIZAÇÃO DA LOGO*/   
 .header .logo img {
     height: 80px; /*Aqui definimos a altura em 80px*/
     width: 105px; /*Aqui definimos a largura em 100px*/
@@ -45,8 +55,7 @@ body {
 
 /*MENU NAV*/
 .header .menu {
-    
-    
+        
     display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
     gap: 40px;  /* Espaço de 15px entre os itens do menu (deixa um afastado do outro) */ 
     flex-wrap: wrap;    
@@ -65,6 +74,27 @@ body {
  .header .menu a:hover {
     color: #7a3c51; /* bordô suave */
 }
+
+/*AÇÕES DO CABEÇALHO (CARRINHO E BOTOES)*/
+.acoes {
+    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
+    align-items: center; /*Alinhando horizontalmente no centro*/
+    gap: 30px; /*Espaçamento entre o carrinho e o botao*/
+}
+
+/*Estilizando o Carrinho*/
+.carrinho {
+    display: flex; /*Aqui definimos que os elementos do cabeçalho podem ficar em diferentes posições*/
+    align-items: center; /*Alinhando horizontalmente no centro*/
+    margin-left: auto;
+    
+    }
+
+.carrinho img {
+    width: 28px; /*largura do carrinho*/
+    height: 28px; /*altura do carrinho*/
+    cursor: pointer; /*ponteiro ao passar o mouse*/
+ }
 
 /*Estilizando o botao login*/
 .botao .login{
