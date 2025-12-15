@@ -193,6 +193,6 @@ body {
     flex-shrink: 0; /*Impede que a imagem encolha*/
     width: 100%; /*Largura responsiva*/
     height: auto; /*Altura automática mantendo proporção*/
-    max-width: 400px; /*Largura máxima em telas grandes*/
+    max-width: 300px; /*Largura máxima em telas grandes*/
     object-fit: contain; /*Mantém proporção da imagem*/
 }
