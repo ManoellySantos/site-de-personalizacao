@@ -1,50 +1,40 @@
 /* Estilo body  */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5; /* Fundo suave */
-    color: #1c1e21;
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove espaçamento interno padrão */
+    background-color: #f0f2f5; /* cor Fundo */
+    color: #1c1e21; /* Cor do texto */
 }
 
 
 
 /* --- cabecalho --- */
 
-
 .header {
-   background-color: #7a3c51; /* fundo azul  */
+   background-color: #7a3c51; /* cor de fundo  */
     color: white;
-    padding: 2px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    padding: 2px 0; /* Espaçamento interno  vertical */
+    text-align: center; /* Centraliza o texto */    
     
-    /* PROPRIEDADES FIXAS */
+    
+    /* manter o cabeçalho fixo */
     position: fixed; 
     top: 0;          
     left: 0;         
     width: 100%;     
-    z-index: 100;    
+    z-index: 100; /* o container fica acima dos outros elementos quanto maior o valor */    
 }
 
-/* Novo: Contêiner para alinhar elementos (Logo, Menu, Botões) */
+/* Container para alinhar elementos (Logo, Menu, Botões) */
 .cabeçalho {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Largura máxima do cabeçalho */
+    margin: 0 auto; /* Centraliza horizontalmente */
     padding: 15px 20px; /* Reduzi o padding para caber tudo */
-    display: flex;
+    display: flex; 
     justify-content: space-between; /* Espaça os elementos */
     align-items: center; /* Alinha verticalmente */
 }
-
-/* Estilo do Logo/Título */
-.header h1 {
-    margin: 0;
-    font-size: 1.8em; /* Reduzi para caber melhor */
-}
-
-
 
 /*LOGO*/
 .logo {
@@ -61,22 +51,22 @@ body {
     object-fit: contain; /*Mantém a proporção da imagem*/
 }
 
-/* Novo: Estilo do Menu de Navegação */
+/* Estilo do Menu de Navegação */
 .nav-menu a {
     color: white;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 0 15px;
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1em; /* Tamanho da fonte */
+    margin: 0 15px; 
     padding: 5px 0;
-    transition: color 0.3s, border-bottom 0.3s;
+    transition: color 0.3s, border-bottom 0.3s; /* Transição suave */
 }
 
 .nav-menu a:hover {
     color: #ffc107; /* Amarelo de destaque */
-    border-bottom: 2px solid #ffc107;
+    border-bottom: 2px solid #ffc107; /* Adiciona uma linha inferior ao passar o mouse */
 }
 
-/* Novo: Estilo dos Botões de Ação */
+/* Estilo dos Botões de Ação */
 .acoes {
     display: flex;
     gap: 10px; /* Espaço entre os botões */
@@ -98,31 +88,32 @@ body {
     cursor: pointer; /*ponteiro ao passar o mouse*/
  }
 
+ /* Estilo base dos botões */
 .btn-action {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 8px 15px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer;  /* Cursor maozinha */
+    transition: background-color 0.3s; /* Transição suave */
 }
 
-/* Estilo específico para Login */
+/* Estilo botao Login */
 .btn-login {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Texto branco */
+    border: 2px solid white; /* Borda branca */
 }
 
 .btn-login:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
 }
 
 /* Estilo específico para Cadastro (Botão principal de ação) */
 .btn-cadastro {
     background-color: ffffffef; /* Amarelo de destaque */
     color: #7a3c51;
-    border: 2px solid #ffc107;
+    border: 2px solid #ffc107; /* cor da Borda  */
 }
 
 .btn-cadastro:hover {
@@ -136,7 +127,7 @@ body {
     justify-content: center; /*Centraliza os elementos do banner*/
     width: 100%; /*Largura 100% do container pai*/
     height: 50px; /*Altura automática conforme conteúdo*/
-    padding: 200px 50px 125px 50px; /*Espaçamento interno responsivo*/
+    padding: 200px 50px 125px 85px; /*Espaçamento interno responsivo*/
     flex-direction: column; /*Posiciona elementos em coluna*/
     align-items: flex-start; /*Alinha itens à esquerda*/
 }
@@ -171,7 +162,7 @@ body {
 .banner-botoes{
     display: flex; /*Permite posicionar os elementos do banner*/
     gap: 15px; /*Espaço entre botões*/
-    width: 100%; /*Ocupa toda a largura disponível*/
+    
 }
 
 .banner-botoes button{
@@ -209,18 +200,24 @@ body {
     object-fit: contain; /*Mantém proporção da imagem*/
 }
 
+.promocoes {
+    text-align: center; /*Centraliza o texto*/
+    margin-top: 50px; /*Margem superior para afastar do cabeçalho fixo*/
+    color: #4a3f46; /*Cor do texto*/
+    font-size: 2em; /*Tamanho da fonte*/
+    font-weight: bold; /*Fonte em negrito*/
+}
 
 main {
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-        
+    padding: 10 20px; /* Espaçamento interno: 0 em cima/baixo e 20px nas laterais */
+    max-width: 1200px; /* largura máxima  */
+    margin: 0 auto; /* Centraliza o elemento horizontalmente na página */
+
 }
 
 
 
-/* Estilando o carrocel ;) */
-
+/* Estilando o carrocel  */
 
 .carousel-container {
     position: relative;
@@ -349,6 +346,7 @@ main {
     margin-top: 50px; /* Margem acima */
     padding: 20px 10px; /* Espaçamento interno */
     gap: 20px; /* ADICIONAL: Espaçamento entre os cartões (linha e coluna) */
+    
 }
 
 .item-card-container{    
@@ -359,6 +357,7 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     height: 100%; /* Garante altura uniforme */
+    
 }
 
 .item-card-container:hover {
@@ -370,6 +369,7 @@ main {
     width: 100%;
     height: 200px; /* Altura fixa para as imagens */
     object-fit: cover;
+    
 }
 
 .item-info-container {
