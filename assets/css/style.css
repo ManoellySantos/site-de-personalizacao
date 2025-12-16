@@ -403,6 +403,7 @@ footer {
 footer p{
     margin: 5px 0; /*Espaçamento entre os parágrafos*/
     font-size: 16px; /*Tamanho da fonte do rodapé*/
+    color: #FFFFFF; /*Cor do texto*/
 }
 
 footer .texto-social {
@@ -424,6 +425,6 @@ footer .social-links a img {
 }
 
 footer .social-links a img:hover {
-    color: #FFFFFF; /*Cor ao passar o mouse*/
+    color: #00000; /*Cor ao passar o mouse*/
     transform: scale(1.2); /*Aumenta o tamanho do ícone ao passar o mouse*/
 }
