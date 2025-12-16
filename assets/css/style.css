@@ -177,7 +177,7 @@ body {
 
 .banner-botoes button:hover{
     background-color: transparent; /*Fundo cinza escuro ao passar o mouse*/
-    color: #7a3c51; /*Cor do texto branco*/
+    color: #7a3c51; /*Cor do texto*/
     border-color: #7a3c51; /*Borda bordô ao passar o mouse*/
 }
 
