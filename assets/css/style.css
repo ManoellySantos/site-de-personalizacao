@@ -424,6 +424,6 @@ footer .social-links a img {
 }
 
 footer .social-links a img:hover {
-    color: #000000; /*Cor ao passar o mouse*/
+    color: #FFFFFF; /*Cor ao passar o mouse*/
     transform: scale(1.2); /*Aumenta o tamanho do ícone ao passar o mouse*/
 }
